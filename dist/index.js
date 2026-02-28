@@ -29969,7 +29969,7 @@ async function run() {
         const apiUrl = core.getInput('api-url');
         const context = github.context;
         // Get job status from environment
-        const jobStatus = process.env.JOB_STATUS || 'unknown';
+        const jobStatus = core.getInput('job-status') || 'success';
         // Build payload
         const payload = {
             repo_full_name: context.repo.owner + '/' + context.repo.repo,

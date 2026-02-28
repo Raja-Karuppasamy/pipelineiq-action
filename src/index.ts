@@ -8,7 +8,7 @@ async function run(): Promise<void> {
     const context = github.context;
 
     // Get job status from environment
-    const jobStatus = process.env.JOB_STATUS || 'unknown';
+    const jobStatus = core.getInput('job-status') || 'success';
 
     // Build payload
     const payload = {

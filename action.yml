@@ -10,6 +10,10 @@ inputs:
   api-key:
     description: 'Your PipelineIQ API key'
     required: true
+    job-status:
+    description: 'Job status'
+    required: false
+    default: 'success'
   api-url:
     description: 'PipelineIQ API URL'
     required: false
