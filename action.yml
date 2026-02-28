@@ -1,16 +1,14 @@
 name: 'PipelineIQ'
 description: 'AI-powered CI/CD failure diagnosis. Automatically sends pipeline data to PipelineIQ for analysis.'
 author: 'Raja Karuppasamy'
-
 branding:
   icon: 'activity'
   color: 'green'
-
 inputs:
   api-key:
     description: 'Your PipelineIQ API key'
     required: true
-    job-status:
+  job-status:
     description: 'Job status'
     required: false
     default: 'success'
@@ -18,7 +16,6 @@ inputs:
     description: 'PipelineIQ API URL'
     required: false
     default: 'https://pipelineiq-production-3496.up.railway.app'
-
 runs:
   using: 'node20'
   main: 'dist/index.js'
